@@ -31,8 +31,11 @@
     <div class="modal fade" id="pdfMod" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 id="mHead"></h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center py-5 bg-light"><i class="bi bi-file-earmark-pdf-fill display-1 text-danger"></i><p class="mt-3">Document Viewer Ready</p></div></div></div></div>
 
     <script>
-        const user = JSON.parse(sessionStorage.getItem('activeUser'));
-        if (!user) window.location.href = "index.html";
+    // If this returns null, the login didn't save the data correctly
+const user = JSON.parse(sessionStorage.getItem('activeUser')); 
+
+// If data is missing, it should kick the user back to login
+if (!user) window.location.href = "index.html";
 
         const content = {
             SOT: ["C Programming", "Computer Organization", "Mathematics for CS", "OJT", "English Communication"],
