@@ -1,0 +1,59 @@
+:root {
+    --sot-color: #2563eb;
+    --soh-color: #10b981;
+    --primary-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+body {
+    background-color: #f3f4f6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Auth Page specific */
+.auth-wrapper {
+    background: var(--primary-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Dashboard specific */
+.navbar-sot { background-color: var(--sot-color) !important; }
+.navbar-soh { background-color: var(--soh-color) !important; }
+
+.sidebar {
+    background: white;
+    min-height: 100vh;
+    border-right: 1px solid #e5e7eb;
+}
+
+.subject-card {
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.ppt-row {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e7eb;
+}
